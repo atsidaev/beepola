@@ -1,0 +1,89 @@
+#ifndef BEEPOLA_ENGINE_SDK
+#define BEEPOLA_ENGINE_SDK
+
+typedef struct tagPhaserInstrument{
+	BYTE	Multiple;
+	INT	Detune;
+	BYTE	Phase;
+} PHASER_INSTRUMENT, *PPHASER_INSTRUMENT;
+
+typedef struct tagOrnament{
+	INT	Length;
+	BYTE	Value[255];
+} ORNAMENT, *PORNAMENT;
+
+typedef struct tagPattern{
+	INT	Length;
+	INT	Tempo;
+	char	*Name;
+	char	**PatternData;	
+} PATTERN, *PPATTERN;
+
+typedef struct tagSong{
+	char	*Title;
+	char	*Author;
+	INT	Length;
+	INT	LoopStart;
+	INT	*SongLayout;
+	PPATTERN *Pattern;
+	PHASER_INSTRUMENT  PhaserInstrument[99];
+	ORNAMENT	Ornament[31];
+} SONG, *PSONG;
+
+#endif
+
+/*
+
+
+// PlayOneRow()
+//
+// Configure the spectrum memory map to play a single row from the passed pattern
+// 
+// IN/OUT:  SpecMem - pointer to an array of 64KBytes representing the emulated spectrum's
+//                    memory (pre-initialised with the img file for the player
+// IN:      PatternData - pointer to a patterndata struct that contains the pattern being
+//                      - edited, that Beepola wants to play a single row from
+// IN:      RowNum - the number of the Row within the pattern that Beepola wants to play
+// IN:      SongData - pointer to a songdata struct that contains any additional info 
+//                   - required to play the row (e.g. instrument defs for Phaser1, ornament
+//                   - defs for Savage).
+int __stdcall PlayOneRow(PBYTE SpecMem,PPATTERN PatternData,int iRowNum,PSONGDATA SongData);
+
+
+// PlayOnePattern()
+// 
+// Configure the spectrum memory map to play the passed pattern
+//
+// Identical to PlayOneRow(), with the exception that this function should set up SpecMem
+// to play the the entire pattern pointed to by PatternData
+int __stdcall PlayOnePattern(PBYTE SpecMem, PPATTERN PatternData, PSONGDATA SongData);
+
+// PlaySong()
+//
+// Configure the spectrum memory map to play the entire passed song (looped) 
+//
+// Set up SpecMem to play the entire song described by SongData, starting from the iStartPos
+// where iStartPos=0 to begin from the song start, 1 to start from the second pattern in the
+// song layout, up to however many patterns are defined in the song layout ("order list")
+int __stdcall PlaySong(PBYTE SpecMem, PSONGDATA SongData, int iStartPos);
+
+// GetAsm()
+//
+// Turn the supplied SONGDATA structure into a commented assembly listing suitable for
+// compilation by Beepola
+//
+// IN:  SongData - pointer to the SongData struct describing the song
+// IN:  bSongDataOnly - if TRUE, return only the music data without the player code
+// IN:  iAddress - ORG address for the resultant assembly listing
+// IN:  cBorderCol - Desired border colour for the player routine to use (0 to 7 inclusive)
+// IN:  bLoop - if TRUE, the player should loop back to the defined loop start point at
+//              then end of the song, otherwise it should RETurn
+// IN:  iPlayerType - 0 = ignore keypresses, 1 = stop on keypress, 2 = play the next
+//                    note and RETurn (only for those engines that support this)
+// IN:  iVectorTableLoc - for engines that use IM2, this is the desired location of the
+//                        interrupt vector table (e.g. 0xFE00, 0x3E00)
+// OUT: AsmListing - pointer to the generated assembly listing based on the above inputs  
+int __stdcall GetAsm(PSONGDATA SongData, BOOL bSongDataOnly, int iAddress, BYTE cBorderCol,
+                     BOOL bLoop, int iPlayerType, int iVectorTableLoc, char *AsmListing);
+
+*/

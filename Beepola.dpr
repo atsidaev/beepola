@@ -38,7 +38,8 @@ uses
   SongRipper in 'SongRipper.pas',
   frmSongRipper in 'frmSongRipper.pas' {SongRipperDlg},
   RMB_Engine in 'RMB_Engine.pas',
-  PLP_Engine in 'PLP_Engine.pas';
+  PLP_Engine in 'PLP_Engine.pas',
+  BeepolaSDK in 'BeepolaSDK.pas';
 
 {$R *.res}
 
