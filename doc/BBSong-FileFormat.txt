@@ -1,0 +1,28 @@
+BBSONG
+0001
+:INFO
+Title=
+Author=
+:END
+:LAYOUT
+LoopStart=0
+Length=8
+[Length bytes] (e.g. 0x00 0x01 0x02 0x01 0x02 0x01 0x02 0x03)
+:END
+:PATTERNDATA
+PatternCount=256
+[PatternCount * the following data:-
+  PatternName=text string
+  Length (4 bytes)
+  Tempo  (4 bytes)
+  Chan1Data (Length bytes)
+  Chan2Data (Length bytes)
+  DrumData  (Length bytes)
+  SustainData (Length bytes)
+]
+:END
+
+
+
+
+

@@ -1,0 +1,24 @@
+{DONE -oFrankT : TAB still acts a bit weird with autoinc settings, it jumps to next column instead of the next row in the column your in.}
+{DONE -oFrankT : Edit->Pattern->Expand x3 (triple pattern length)}
+{TODO -occowley : Write PZX and TZX files}
+{TODO -oShiru : Allow manual tweaking of dividers on a per-note basis for TMB & MSD engines.}
+{DONE -occowley : TAP/SNA/BIN music ripper}
+{TODO -oHikaru : Undo stack.}
+{DONE -oShiru : Add an Auto-Step value of 0 (don't advance cursor)}
+{DONE -oµB :Add hotkeys for:
+- cloning the current pattern to the next free one
+- transpose current channel up (and down)}
+{TODO -occowley : Add volume slider to toolbar.}
+{TODO -occowley : Add music synth engine.}
+{TODO -occowley : Add ROM beeper engine (using arpeggios for 2 channels) for playback on 16K Speccies.}
+{DONE -occowley : Add Jason C Brooke Savage Engine.}
+{DONE -occowley/Shiru : Improved error trapping in emulation (display engine in use, PC, etc)}
+{TODO -oShiru : Song Duration Estimate (requires setting of 48K,128K, Pentagon Timings for Beepola emulation).}
+{DONE -oShiru/Irrlicht Project : Support for configurable Keyboard layout (or QWERTY/AZERTY/etc options)}
+{DONE -oShiru : Allow entering numbers into Pattern Length and Tempo fields.}
+{DONE -oShiru :Edit->Pattern->Expand (double pattern length and insert a blank row between each row) and Edit->Pattern->Shrink}
+{DONE -oShiru : Row Insert and Delete}
+{DONE -oShiru : Allow "1" key to enter a rest (same as "A" key)}
+{TODO -oMister Beep/Irrlicht Project : Add Music Box Drums}
+{TODO -oShiru : AY music file export option}
+{DONE -oMister Beep : Add numbers 0,1,2...xx above the song layout grid.}

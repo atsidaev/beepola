@@ -1,0 +1,24 @@
+Beepola Licence
+---------------
+The bits of the code written by me, Chris Cowley, are copyright me and may not
+be used in any derivative work without written permission UNLESS:-
+
+  a) I am credited somewhere for the bits I wrote.
+  b) Your derivative work is made available to the general public, at no cost.
+  c) You publish, in full, the source code for any derivative work with full 
+     instructions for compiling it using publicly available tools.
+
+The bits of the code not written by me (the Z80 code for the beeper engines) are
+the copyright of their respective authors and, in some cases are essentially
+used by Beepola without the permission of the original copyright owners. As far
+as I'm aware, none of the original authors or copyright holders has a problem
+with this, but I would strongly advocate applying the three criteria above
+(crediting, making available at no cost, publishing source) to any derivative
+works made that include that code, as I have done in Beepola.
+
+For the avoidance of any doubt: all songs or compiled code created with Beepola
+are NOT "derived works" under this licence, and may be used freely. :)
+
+In short, do what you like with this stuff, but please credit anyone whose
+work you use, publish your source and, where appropriate, binaries for
+free. Play nicely.

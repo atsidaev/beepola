@@ -1,0 +1,9 @@
+z80_tab  BINARY z80.tab
+sfx_img  BINARY sfx.img
+tmb_img  BINARY tmb.img
+msd_img  BINARY msd.img
+p1d_img  BINARY p1d.img
+p1s_img  BINARY p1s.img
+svg_img  BINARY svg.img
+abt_img  BINARY aboutboxmusic.img
+rmb_img  BINARY rmb.img

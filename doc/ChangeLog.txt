@@ -1,0 +1,170 @@
+Beepola Release History
+=======================
+ 1. ROMBeep
+ 2. Plip Plop, Stocker.
+ 3. TMB Drums.
+ 
+v1.06.01 - 22/Oct/2010
+----------------------
+ 1. Fix drums sounding twice when a new note is entered under some
+    circumstances.
+
+v1.06.00 - 13/Oct/2010
+----------------------
+ 1. Fixed compatibility with WINE (caused by differences between the way
+    WINE handles waveOut API compared to Windows). This was inadvertently
+    broken in versions 1.03.00 - v1.05.03
+ 2. Improved sound reproduction and timing.
+ 3. Added ROMBeep engine as a compile-time only option (see the Beeper Engine
+    dropdown list in the Compile dialog). This is a compact, pseudo 2 channel
+    engine using arpeggios and the BEEP routine from the Spectrum ROM. It will
+    therefore work correctly on 16K Spectrums or in low, contended, memory on
+    other models.
+
+v1.05.03 - 28/Aug/2010
+----------------------
+ 1. Toolbar hints are now displayed while a song is playing.
+ 2. Fixed a number of issues related editing ornaments in the Savage engine.
+ 
+v1.05.02 - 24/Aug/2010
+----------------------
+ 1. Added FX columns to Savage engine, see online help for usage information.
+ 2. FIX: Fixed TAB behaviour within the pattern editor.
+ 3. Updated keyboard layout dialog.
+ 4. Improved drum entry behaviour to allow jamming when auto-inc is set to 0,
+    and to autoincrement in pattern editor for engines with fewer than 10 drums
+ 5. FIX: Copy and Paste now correctly copies Savage effects data (Glis,Orn,etc)
+ 6. Ornaments in the Savage engine can now be looped (click the "Looped"
+    checkbox for the selected ornament to enable this).
+ 7. Updated /songs/ folder with new material.
+
+v1.05.01 - 17/Aug/2010
+----------------------
+ 1. FIX: After editing a song using the Savage engine, open an existing song
+    written for The Music Box. Savage Ornament editor remains displayed.
+ 2. FIX: Bugs loading Z80 files into the song ripper. It should now cope
+    properly with 128 snapshots (including variants such as Pentagon &
+    Scorpion) and Timex machines.
+ 3. FIX: Opening a Savage engine song using the command line or a *.bbsong file
+    association incorrectly selected the Special FX engine in the engine
+    dropdown in v1.05.00.
+ 4. FIX: Pattern play (F4) was playing the first row again after going through
+    the pattern.
+ 5. Added Edit->Pattern->Expand x3 and Shrink /3 for tripling/thirding
+    patterns.
+ 6. /songs/ folder updated with new material.
+
+v1.05.00 - 15/Aug/2010
+----------------------
+ 1. Improved timer resolution of Z80 emulation on some systems.
+ 2. Fixed bug when attempting to export a WAV file to a file that is in use.
+ 3. Fixed Ctrl+C/Ctrl+V issues, when copying or pasting text from an edit box.
+ 4. Fixed missing colon after DIV_2 label in assebler output for Phaser1
+    engine, which was foiling some assemblers.
+ 5. Added AutoStep value of 0 (don't advance cursor).
+ 6. Added Savage engine, by Jason C Brooke (reversed engineered from part 2 of
+    the game Savage by Probe Software - thanks to barmaley_m and Shiru).
+ 7. Added Tools->Options dialog with options for Show Column Numbers and a
+    Hex/Dec switch for row labels in the pattern editor.
+ 8. Added Edit->Pattern->Expand & Edit->Pattern->Shrink facilities.
+ 9. Improved support for non-QWERTY keyboards (specifically, French AZERTY, and
+    German/Polish QWERTZ layouts). Plus '1' and 'A' keys both now function as
+    rest/note-off on those engines that support note-off.
+10. The pattern compression algorithm in all previous versions of Beepola was
+    not working correctly. Beepola now produces smaller compiled songs files,
+    particularly noticable with the SpecialFX engine which now compresses
+    percussion data independely of the tone channels. e.g. ChuckRock.bbsong
+    now compiles to 1797 bytes instead of 1983 bytes in v1.04.
+11. Added TAP/Z80 song ripper to File->Import menu. Currently rips songs
+    compliled with the original Music Box editor for Spectrum, with Shiru's
+    original Phaser1 editor for the Spectrum, and the Beepola version of
+    Phaser1.
+12. Various other minor mods, fixes and improvements.
+
+v1.04.00 - 22/Jun/2010
+----------------------
+ 1. Fixed check mark appearing against "Save As..." menu item.
+ 2. Added a splash of music to the About Box for no particularly good reason.
+ 3. Added Edit->Pattern->Swap Channels...  (swaps data between channel 1 and
+    channel 2 for the currently-selected pattern).
+ 4. Added Edit->Pattern->Append...  (appends a pattern onto the end of another)
+ 5. Fixed delay between patterns when playing a song in the editor.
+ 6. When entering new patterns into the song layout list, the pattern editor is
+    now automatically updated to show the newly-added pattern.
+ 7. Added File->Import->Vortex Tracker II Text Module (imports 2 channels of
+    melody data from a VTII module file, ignoring any ornamention or command
+    data).
+ 8. Added Edit->Song->Adjust Tempo... (adjusts the tempo of all patterns in a
+    song).
+ 9. Fixed show-stoppng bugs in the "in-game music" option for both Music Box
+    and Music Studio engines. I'm amazed nobody noticed that it didn't work
+    properly!
+10. Added "Most Recently Used" file list to File menu.
+11. Auto-Inc now goes up to 8 (was tempted to make it go to 11...)
+12. Pressing DELETE in the pattern editor now advances by the specified
+    Auto-Inc amount instead of always by 1.
+
+v1.03.01 - 21/May/2010
+----------------------
+ 1. Fixed problems when clicking on piano keys to enter notes with Phaser1
+    beeper engine selected.
+    
+v1.03.00 - 21/May/2010
+----------------------
+ 1. Added Phaser 1 (Digital Drums) beeper engine.
+ 2. Added Phaser 1 (Synthesised Drums) beeper engine.
+ 3. Pattern Player now remembers the row and column that was selected prior to
+    starting playback, and returns to this position when playback is stopped.
+ 4. Space bar can now be used to stop song playback as an alternative to F8.
+ 5. New menu layout
+ 6. Split the player and song data for all beeper engines to allow for a single
+    copy of each player routine to easily support multiple songs.
+ 7. Added options to "Output File:" drop-down in the Compile Song dialog for
+    saving only song data (with no player routine) as either a TAP file, a BIN
+    file, or ASM listing.
+ 8. Cleaned up the user interface a little (new toolbar, icons, etc.).
+ 9. Some new demo songs added.
+
+v1.02.00 - 10/May/2010
+----------------------
+ 1. You can no longer change the current cell in the pattern display using the
+    mouse when a song/pattern is being played.
+ 2. Fixed a problem in the Special FX player that caused notes at the start of
+    a song to be detuned until notes were present on both channels.
+ 3. Note entry by clicking on the piano key display is now possible.
+ 4. Doing various things such as entering or deleting a note, during song
+    playback is no longer permitted.
+ 5. Fixed incorrect credits for Music Studio engine.
+ 6. Unlocked the hidden 13th drum type in the Music Studio engine. :)
+ 7. Entering a Rest (using the 'A' key) now effects a "note off" command for
+    the specified channel when using the Special FX engine. NOTE: This will
+    change the sound of any song written in previous versions of Beepola that
+    contained any rests (R--) as they were previously ignored.
+ 8. Fixed crash when entering Drum: 0 in the Special FX engine.
+ 9. New songs are now created containing a single pattern in the song layout.
+10. Added (Play->From Current Position (F6)) option to the menus. This starts
+    playback of the song from the currently-highlighted position in the song
+    layout.
+
+
+v1.01.00 - 30/Apr/2010
+----------------------
+ 1. Added keyboard shortcuts for various menu items (F4 - Play Pattern,
+    F5 - Play Song, F8 - Stop, etc).
+ 2. Notes and percussion effects now sound, using the currently selected
+    engine, as they are entered.
+ 3. Added "Output assembly listing" option to the Compile Song dialog.
+ 4. Added Edit->Undo,Copy & Paste menu with associated functionality.
+ 5. Some minor size optimisation in the Special FX player engine.
+ 6. Fixed buffering issues that were affecting sound playback on some hardware.
+ 7. Some optimisation of patten selection and display code to minimise the
+    playback delays on some hardware.
+ 8. Various miscellaneous minor bug fixes and optimisations.
+ 9. Added online help. (Help->Online Help Contents).
+10. Added new Tone Generator - The Music Studio.
+11. Added "Transpose Song..." option to Tools menu.
+12. Added "Song Information..." option to Tools menu.
+
+v1.00.00 - 19/Apr/2010
+----------------------
+ 1. Initial Release

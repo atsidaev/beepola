@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{6fd3313a-ffe1-41b7-a041-06c466c333ee}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>Beepola.exe</DCC_DependencyCheckOutputName>
+    <MainSource>Beepola.dpr</MainSource>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Define>DEBUG</DCC_Define>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">True</VersionInfo><VersionInfo Name="MajorVer">1</VersionInfo><VersionInfo Name="MinorVer">6</VersionInfo><VersionInfo Name="Release">1</VersionInfo><VersionInfo Name="Build">91</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">2057</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">Grok Developments Ltd</VersionInfoKeys><VersionInfoKeys Name="FileDescription"></VersionInfoKeys><VersionInfoKeys Name="FileVersion">1.6.1.91</VersionInfoKeys><VersionInfoKeys Name="InternalName">Beepola</VersionInfoKeys><VersionInfoKeys Name="LegalCopyright">Copyright ©2010 Grok Developments Ltd.</VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName">Beepola</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.6.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclofficexp100.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dcloffice2k100.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+    </Excluded_Packages><Source><Source Name="MainSource">Beepola.dpr</Source></Source></Delphi.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="Beepola.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="AsmPass1.pas" />
+    <DCCReference Include="AsmPass2.pas" />
+    <DCCReference Include="AsmTypes.pas" />
+    <DCCReference Include="AsmUtils.pas" />
+    <DCCReference Include="Assemb.pas" />
+    <DCCReference Include="frmAboutDlg.pas">
+      <Form>AboutDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmAdjustSongTempoDlg.pas">
+      <Form>AdjustSongTempoDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmCompileDlg.pas">
+      <Form>CompileDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmCopyPattern.pas">
+      <Form>CopyPatternDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmExportWavDlg.pas">
+      <Form>ExportWavDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmImportVTIIFileDlg.pas">
+      <Form>ImportVTIIFileDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmKeyLayoutWnd.pas">
+      <Form>KeyboardLayoutWnd</Form>
+    </DCCReference>
+    <DCCReference Include="frmOptionsDlg.pas">
+      <Form>OptionsDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmPatternAppendDlg.pas">
+      <Form>PatternAppendDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmSongInfoDlg.pas">
+      <Form>SongInfoDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmSongRipper.pas">
+      <Form>SongRipperDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmSTMainWnd.pas">
+      <Form>STMainWnd</Form>
+    </DCCReference>
+    <DCCReference Include="frmSwapChannelsDlg.pas">
+      <Form>SwapChannelsDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmTransposePatternDlg.pas">
+      <Form>TransposePatternDlg</Form>
+    </DCCReference>
+    <DCCReference Include="frmTransposeSongDlg.pas">
+      <Form>TransposeSongDlg</Form>
+    </DCCReference>
+    <DCCReference Include="GrokUtils.pas" />
+    <DCCReference Include="MRUList.pas" />
+    <DCCReference Include="MSD_Engine.pas" />
+    <DCCReference Include="P1D_Engine.pas" />
+    <DCCReference Include="P1S_Engine.pas" />
+    <DCCReference Include="PlayerThread.pas" />
+    <DCCReference Include="PLP_Engine.pas" />
+    <DCCReference Include="RegSettings.pas" />
+    <DCCReference Include="RMB_Engine.pas" />
+    <DCCReference Include="SFX_Engine.pas" />
+    <DCCReference Include="SongRipper.pas" />
+    <DCCReference Include="SpecEmu.pas" />
+    <DCCReference Include="STInstruments.pas" />
+    <DCCReference Include="STPatterns.pas" />
+    <DCCReference Include="STSong.pas" />
+    <DCCReference Include="SVG_Engine.pas" />
+    <DCCReference Include="TMB_Engine.pas" />
+    <None Include="Beepola.todo" />
+    <None Include="doc\BBSong-FileFormat.txt" />
+    <None Include="doc\ChangeLog.txt" />
+  </ItemGroup>
+</Project>
